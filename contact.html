@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact Us | Waypoint</title><link rel="stylesheet" href="style.css"></head><body>
+<header><a class="brand" href="index.html">Waypoint</a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></nav></header>
+<main class="inner"><h1>Contact Us</h1><p>Tell us about a destination we should add or ask a question about Waypoint.</p><form class="contact" id="contact-form"><label>Name<input required name="name" autocomplete="name"></label><label>Email<input required name="email" type="email" autocomplete="email"></label><label>Message<textarea required name="message" rows="5"></textarea></label><p>Add a recipient in your email app before sending.</p><button>Open email draft</button></form></main>
+<script>
+document.querySelector('#contact-form').addEventListener('submit', event => {
+  event.preventDefault();
+  const fields = new FormData(event.currentTarget);
+  const body = fields.get('message') + '\n\n' + fields.get('name') + ' (' + fields.get('email') + ')';
+  window.location.href = 'mailto:?subject=Waypoint%20inquiry&body=' + encodeURIComponent(body);
+});
+</script></body></html>

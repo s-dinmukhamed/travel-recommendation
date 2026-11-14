@@ -1,0 +1,16 @@
+{
+  "beaches": [
+    {"name":"Waikiki Beach, Hawaii","imageUrl":"images/waikiki.jpg","description":"A city beach in Honolulu with views toward Diamond Head."},
+    {"name":"Bondi Beach, Australia","imageUrl":"images/bondi.jpg","description":"A Sydney surf beach and the starting point for the coastal walk to Coogee."}
+  ],
+  "temples": [
+    {"name":"Angkor Wat, Cambodia","imageUrl":"images/angkor.jpg","description":"A vast temple complex near Siem Reap, known for its towers and galleries."},
+    {"name":"Kiyomizu-dera, Japan","imageUrl":"images/kiyomizu.jpg","description":"A hillside Buddhist temple with a wooden terrace overlooking Kyoto."}
+  ],
+  "countries": [
+    {"name":"Japan","cities":[
+      {"name":"Tokyo, Japan","imageUrl":"images/tokyo.jpg","description":"Explore neighborhoods with lively streets, gardens and galleries."},
+      {"name":"Kyoto, Japan","imageUrl":"images/kyoto.jpg","description":"Walk through historic districts, temple grounds and gardens."}
+    ]}
+  ]
+}
