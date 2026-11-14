@@ -25,12 +25,13 @@ async function search(value) {
     if (request !== latestSearch) return;
     const matches = {
       beach: data.beaches, beaches: data.beaches,
-      temple: data.temples, temples: data.temples
+      temple: data.temples, temples: data.temples,
+      country: data.countries, countries: data.countries
     };
     const country = data.countries.find(entry => entry.name.toLowerCase() === term);
     const destinations = Object.hasOwn(matches, term) ? matches[term] : country?.cities ?? [];
     heading.textContent = country?.name ?? 'Recommendations';
-    status.textContent = destinations.length ? '' : 'Try beaches, temples, or Japan.';
+    status.textContent = destinations.length ? '' : 'Try beaches, temples, countries, Japan, or Australia.';
     for (const {name, imageUrl, description} of destinations) {
       const card = document.createElement('article');
       const image = document.createElement('img');
