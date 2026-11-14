@@ -6,7 +6,7 @@ const status = document.querySelector('#status');
 const heading = document.querySelector('#result-heading');
 
 async function loadDestinations() {
-  const response = await fetch('./travel_recommendation_api.json');
+  const response = await fetch('./travel_recommendation_api.json?v=2');
   if (!response.ok) throw new Error('Could not load recommendations');
   return response.json();
 }
